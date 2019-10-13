@@ -1,0 +1,61 @@
+[
+    [{
+        "user_id": 1,
+        "name": "Ekaterina", 
+        "status": "Keep_book",
+        "loogin": "@mail.ru",
+        "knigaVzial": ["", "user1", "user2"],
+        "knigaPolozil": ["user1"]
+    },
+    {
+        "user_id": 2, 
+        "name": "Viktor", 
+        "Status": "Keep_book", 
+        "Loogin": "@yandex.ru",
+        "knigaVzial": ["", "user1", "user2"],
+        "knigaPolozil": ["user1"]
+    }
+],
+
+    [{
+            "id_book": "1",
+            "name_book": "A",
+            "count_all": 2,
+            "count_now": 0,
+            "status": "False"
+        },
+        {
+            "id_book": "2",
+            "name_book": "A",
+            "count_all": 1,
+            "count_now": 1,
+            "status": "True"
+        },
+        {
+            "id_book": "3",
+            "name_book": "A",
+            "count_all": 2,
+            "count_now": 2,
+            "status": "True"
+        }
+    ],
+    [{
+            "id_book": [1],
+            "id_user": [1],
+            "time_on": ["11.11.11"],
+            "time_off": ["11.12.11"]
+        },
+        {
+            "id_book": [2],
+            "id_user": [3],
+            "time_on": ["11.11.11"],
+            "time_off": ["11.12.11"]
+        },
+        {
+            "id_book": [3],
+            "id_user": [2],
+            "time_on": ["11.11.11"],
+            "time_off": ["11.12.11"]
+        }
+    ]
+]
