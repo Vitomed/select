@@ -8,7 +8,7 @@ import random
 app = Flask(__name__)
 
 
-@app.route('/1/<position_book>/<user>/1')
+@app.route('/index')
 def get_index(position_book, user):
     with open('my_db.json', 'r', encoding='utf-8') as read_book:
         read_book = json.load(read_book)
@@ -30,15 +30,21 @@ def get_index(position_book, user):
 
             with open('my_db.json', 'w', encoding='utf-8') as Achange_book:
                 Achange_book.write(json.dumps(read_book))
-                return render_template("index.html")
+                return redirect('/A')
 
         else:
             read_book[1][position_book]["status"] = "True"
             with open('my_db.json', 'w', encoding='utf-8') as change_book:
                 change_book.write(json.dumps(read_book))
-                return render_template("putsucces.html")
+                return redirect('/B')
 
-    # return render_template("index.html")
+@app.route('/A')
+def inter():
+    return render_template("index.html")
+
+@app.route('/B')
+def default():
+    return render_template("putsucces.html")
 
 class User:
     def __init__(self, name, user_id):
