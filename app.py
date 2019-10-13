@@ -8,7 +8,7 @@ import random
 app = Flask(__name__)
 
 
-@app.route('/index')
+@app.route('/1/<position_book>/<user>/1')
 def get_index(position_book, user):
     with open('my_db.json', 'r', encoding='utf-8') as read_book:
         read_book = json.load(read_book)
